@@ -1,0 +1,73 @@
+/* columns-feature — featured case-study card (image + text column)
+   Values extracted from source computed styles. */
+
+.columns-feature > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.columns-feature img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.columns-feature > div > div {
+  order: 1;
+}
+
+.columns-feature > div > .columns-feature-img-col {
+  order: 0;
+}
+
+/* Heading */
+.columns-feature h2 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  font-size: var(--heading-font-size-xl);
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+/* Author / date meta paragraphs */
+.columns-feature > div > div p {
+  margin: 8px 0 0;
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--text-color);
+}
+
+/* first paragraph after heading = author line */
+.columns-feature > div > div p:first-of-type {
+  margin-top: 16px;
+}
+
+/* last paragraph = date • read-time (muted) */
+.columns-feature > div > div p:last-of-type {
+  color: var(--link-color);
+}
+
+@media (width >= 900px) {
+  .columns-feature > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .columns-feature > div > div {
+    order: unset;
+  }
+
+  .columns-feature > div > .columns-feature-img-col {
+    order: unset;
+  }
+}

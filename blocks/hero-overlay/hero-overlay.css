@@ -1,0 +1,132 @@
+/* Block: hero-overlay -- full-width closing CTA banner */
+
+/* Rounded card with cover image, dark bottom gradient overlay, and bottom-left text. */
+
+/* Values extracted from source computed styles. */
+
+/* Full-bleed wrapper: card fills the content container width */
+.hero-overlay-wrapper {
+  max-width: 100%;
+}
+
+/* The card itself */
+.hero-overlay {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Dark bottom-up gradient overlay (source: .overlay div) */
+.hero-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to top, rgb(0 0 0 / 70%) 0%, rgb(0 0 0 / 0%) 60%);
+  pointer-events: none;
+}
+
+/* Image row -> absolute cover image behind everything */
+.hero-overlay > div:first-child {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  margin: 0;
+}
+
+.hero-overlay > div:first-child > div,
+.hero-overlay > div:first-child p,
+.hero-overlay > div:first-child picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.hero-overlay > div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text row -> overlaid content aligned to bottom-left */
+.hero-overlay > div:last-child {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+
+.hero-overlay > div:last-child > div {
+  max-width: 672px;
+  padding: 40px 24px;
+  box-sizing: border-box;
+}
+
+/* Heading (source .h1-heading: 56px Syncopate) */
+.hero-overlay h2 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Subheading paragraph */
+.hero-overlay p {
+  margin: 16px 0 0;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* CTA button group / button-container */
+.hero-overlay p.button-container {
+  display: block;
+  margin: 32px 0 0;
+}
+
+/* White pill CTA -- override the global underlined-link button reset */
+.hero-overlay a.button:any-link,
+main .hero-overlay a.button:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 12px 24px;
+  border: 2px solid #fff;
+  border-radius: 9999px;
+  background: #fff;
+  color: #000;
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hero-overlay a.button:any-link:hover,
+main .hero-overlay a.button:any-link:hover {
+  background: rgb(255 255 255 / 90%);
+  color: #000;
+  border-color: rgb(255 255 255 / 90%);
+  text-decoration: none;
+}
+
+@media (width >= 900px) {
+  .hero-overlay {
+    min-height: 448px;
+  }
+
+  .hero-overlay > div:last-child > div {
+    padding: 64px;
+  }
+}

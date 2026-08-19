@@ -1,0 +1,31 @@
+{
+  "variantName": "hero-overlay",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-08-19T00:25:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.wknd-trendsetters.site/",
+    "originPage": "WKND Trendsetters home page closing call-to-action banner",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "cta",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background image + overlay + heading + subheading + 1 CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": ["closing call-to-action banners", "full-bleed promotional sections with overlaid text on an image"],
+    "notSuitableFor": ["light text-on-white heroes", "heroes with side-by-side image galleries"]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-19T00:25:00.000Z"
+  }
+}
