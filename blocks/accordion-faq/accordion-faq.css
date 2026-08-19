@@ -1,0 +1,66 @@
+/* Block: accordion-faq -- CSS from source computed styles */
+
+.accordion-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.accordion-faq .accordion-faq-item {
+  border: 1px solid rgb(232 232 232);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.accordion-faq .accordion-faq-item-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 32px;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--text-color);
+  transition: background-color 0.15s;
+}
+
+.accordion-faq .accordion-faq-item-label::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-faq .accordion-faq-item-label:hover,
+.accordion-faq .accordion-faq-item-label:focus-visible {
+  background-color: var(--light-color);
+}
+
+.accordion-faq .accordion-faq-item-label-text {
+  flex: 1;
+}
+
+.accordion-faq .accordion-faq-icon {
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.accordion-faq .accordion-faq-item[open] .accordion-faq-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-faq .accordion-faq-item-body {
+  padding: 0 32px 32px;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgb(64 64 64);
+}
+
+.accordion-faq .accordion-faq-item-body p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}

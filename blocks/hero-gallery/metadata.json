@@ -1,0 +1,31 @@
+{
+  "variantName": "hero-gallery",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-08-19T00:25:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.wknd-trendsetters.site/",
+    "originPage": "WKND Trendsetters home page top hero",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + subheading + 2 CTAs + image gallery",
+    "buttonCount": 2,
+    "imageCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": ["blog/editorial landing heroes with a supporting image gallery", "intro sections combining CTAs with multiple preview images"],
+    "notSuitableFor": ["full-bleed background-image heroes", "text-only heroes"]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-19T00:25:00.000Z"
+  }
+}

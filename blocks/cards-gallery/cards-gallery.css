@@ -1,0 +1,47 @@
+/* cards-gallery — image-only responsive square grid
+   Source: 12px gap; 1 col < 768px, 2 cols 768–991px, 4 cols >= 992px;
+   items 1/1 aspect ratio, 20px radius, clipped; images cover. */
+
+.cards-gallery > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (width >= 768px) {
+  .cards-gallery > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 992px) {
+  .cards-gallery > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.cards-gallery > ul > li {
+  aspect-ratio: 1 / 1;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.cards-gallery .cards-gallery-card-image {
+  line-height: 0;
+  height: 100%;
+}
+
+.cards-gallery .cards-gallery-card-image picture {
+  display: block;
+  height: 100%;
+}
+
+.cards-gallery > ul > li img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

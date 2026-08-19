@@ -1,0 +1,98 @@
+/* Block: hero-gallery
+ * Editorial hero: text column (heading + copy + 2 pill CTAs) beside a 3-image gallery.
+ * Values extracted from source computed styles (wknd-trendsetters.site home hero).
+ * Authored order is gallery-first, so the text row is reordered to the left column.
+ */
+
+/* Mobile-first: single column, text above gallery */
+.hero-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.hero-gallery > div:first-child { order: 2; } /* gallery row */
+.hero-gallery > div:last-child { order: 1; }  /* text row */
+
+/* --- Text column --- */
+.hero-gallery h1 {
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.hero-gallery p {
+  margin: 24px 0 0;
+  font-size: var(--body-font-size-m);
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* --- Pill CTAs (grouped by block JS into .hero-gallery-buttons) --- */
+.hero-gallery .hero-gallery-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+main .hero-gallery a.hero-gallery-cta:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: 2px solid var(--dark-color);
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+main .hero-gallery a.hero-gallery-cta.is-primary:any-link {
+  background-color: var(--dark-color);
+  color: var(--background-color);
+}
+
+main .hero-gallery a.hero-gallery-cta.is-secondary:any-link {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+main .hero-gallery a.hero-gallery-cta:any-link:hover {
+  text-decoration: none;
+}
+
+/* --- Gallery column --- */
+.hero-gallery > div:first-child > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.hero-gallery > div:first-child > div > * {
+  margin: 0;
+}
+
+.hero-gallery picture {
+  display: block;
+  line-height: 0;
+}
+
+.hero-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Desktop: two columns, text left, gallery right */
+@media (width >= 900px) {
+  .hero-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+}
